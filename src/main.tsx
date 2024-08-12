@@ -4,9 +4,9 @@ import App from "./App.tsx";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react";
 
 import * as rootRoute from "./App.tsx";
-import React from "react";
 
 const router = createBrowserRouter(
   [
@@ -20,9 +20,8 @@ const router = createBrowserRouter(
   {
     async unstable_patchRoutesOnMiss({ path, patch }) {
       if (path.startsWith("/remote")) {
-        // @ts-ignore
         const routes = await import("remote/routes");
-        patch("root", routes.default.routes);
+        patch(null, routes.default.routes);
       }
     },
   }

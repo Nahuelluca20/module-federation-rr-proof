@@ -15,23 +15,6 @@ export default defineConfig({
         "./root": "./src/App",
       },
       shared: ["react", "react-dom", "react-router-dom"],
-      // shared: {
-      //   // ...dependencies,
-
-      //   react: {
-      //     // @ts-expect-error
-      //     singleton: true,
-      //     requiredVersion: dependencies.react,
-      //   },
-      //   "react-dom": {
-      //     singleton: true,
-      //     requiredVersion: dependencies["react-dom"],
-      //   },
-      //   "react-router-dom": {
-      //     singleton: true,
-      //     requiredVersion: dependencies["react-router-dom"],
-      //   },
-      // },
     }),
   ],
   server: {
